@@ -1,6 +1,6 @@
 # AshhalSyed.ca
 
-# [Click Here To Visit My Site](https://ashhalsyed.github.io/)
+                                  [Click Here To Visit My Site](https://ashhalsyed.github.io/)
 
 * This is my personal website that I am currently coding in HTML, CSS, and Javascript
 * I have not implemented any Javacript yet
