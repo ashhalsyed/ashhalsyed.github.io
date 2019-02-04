@@ -8,23 +8,89 @@ body {
 body header {
   position: fixed;
   top: 0;
-  padding: 2em 0 0 2em;
 }
 
-body header img {
-  width: 100px;
-  height: 100px;
+body header span {
+  font-size: 0;
+  margin-left: 20px;
+  margin-top: 20px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-body header h1 {
+body header span .Logo {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  display: inline-block;
+  vertical-align: middle;
+  width: 75px;
+  height: 75px;
+}
+
+body header span nav {
+  display: inline-block;
+  vertical-align: middle;
+  margin: none;
+}
+
+body header span nav .MenuBar {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
   color: white;
   font-family: "Quicksand";
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: black;
   border-radius: 20px;
   -webkit-box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.2);
   text-align: center;
   padding: 10px 15px 10px 15px;
+  min-width: 150px;
+  font-size: 24px;
+  font-weight: 550;
+}
+
+body header span nav .MenuBar.AboutMe {
+  margin-left: 25px;
+}
+
+body header span nav .MenuBar.AboutMe:hover {
+  border: 3px solid red;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  font-weight: 550;
+}
+
+body header span nav .MenuBar.AboutMe:focus {
+  border: 3px solid rgba(255, 0, 0, 0.8);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  font-weight: 550;
+}
+
+body header span nav .MenuBar.Projects {
+  margin-left: 25px;
+}
+
+body header span nav .MenuBar.Projects:hover {
+  border: 3px solid yellow;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  font-weight: 550;
+}
+
+body header span nav .MenuBar.Projects:focus {
+  border: 3px solid rgba(255, 255, 0, 0.8);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  font-weight: 550;
 }
 
 footer {
@@ -40,18 +106,18 @@ footer div {
   bottom: 0;
 }
 
-footer div #Github_Logo {
+footer div .GithubLogo {
   width: 50px;
   height: 50px;
   padding: 15px 25px 0 25px;
 }
 
-footer div #LinkedIn_Logo {
+footer div .LinkedInLogo {
   width: 50px;
   height: 50px;
 }
 
-footer div #Thingiverse_Logo {
+footer div .ThingiverseLogo {
   width: 50px;
   height: 50px;
 }

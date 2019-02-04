@@ -8,42 +8,68 @@ body{
     header {
         position: fixed;
         top: 0;
-        padding: 2em 0 0 2em;
-        // .fa-linkedin {
-        //     padding: 10px;
-        //     font-size: 50px;
-        //     width: 50px;
-        //     text-align: center;
-        //     text-decoration: none;
-        //     border-radius: 10%;
-        //     color:black;
-        //     background-color:white;
-        // .fa-github {
-        //     padding: 10px;
-        //     font-size: 50px;
-        //     width: 50px;
-        //     height: 50px;
-        //     text-align: center;
-        //     text-decoration: none;
-        //     border-radius: 10%;
-        //     color:black;
-        //     background-color:white;
-        // }
-        img{
-            width: 100px;
-            height: 100px;
-            // box-shadow: 0 5px 10px 2px rgba(0,0,0,.2); 
-            // border-radius: 50%;
-        }
-        h1{
-            color: white;
-            font-family: "Quicksand";
-            background-color: rgba(black,.5);
-            border-radius: 20px;
-            box-shadow: 0 5px 10px 2px rgba(0,0,0,.2); 
-            text-align: center;
-            padding:  10px 15px 10px 15px;
-        }
+        span{
+            font-size: 0;
+            margin-left: 20px;
+            margin-top: 20px;
+            display: inline-block;
+            vertical-align: middle;
+            .Logo{
+                user-select: none;
+                pointer-events: none;
+                display: inline-block;
+                vertical-align: middle;
+                width: 75px;
+                height: 75px;
+            }
+            nav{
+                display: inline-block;
+                vertical-align: middle;
+                margin: none;
+                .MenuBar{
+                    user-select: none;
+                    display: inline-block;
+                    vertical-align: middle;
+                    text-decoration: none;
+                    color: white;
+                    font-family: "Quicksand";
+                    background-color: black;
+                    border-radius: 20px;
+                    box-shadow: 0 5px 10px 2px rgba(0,0,0,.2); 
+                    text-align: center;
+                    padding:  10px 15px 10px 15px;
+                    min-width: 150px;
+                    font-size: 24px;
+                    font-weight: 550;
+                    &.AboutMe{
+                        margin-left: 25px;
+                        &:hover{
+                            border: 3px solid red;
+                            transition: 0.2s ease-in-out; 
+                            font-weight: 550;
+                        }       
+                        &:focus{
+                            border: 3px solid rgba(red,0.8);
+                            transition: 0.2s ease-in-out; 
+                            font-weight: 550;
+                        }
+                    }       
+                    &.Projects{
+                        margin-left: 25px;
+                        &:hover{
+                            border: 3px solid rgb(255, 255, 0);
+                            transition: 0.2s ease-in-out; 
+                            font-weight: 550;
+                        }
+                        &:focus{
+                            border: 3px solid rgba(255, 255, 0,0.8);
+                            transition: 0.2s ease-in-out; 
+                            font-weight: 550;
+                        }         
+                    }
+                }
+            }
+        }        
     }
 }
 
@@ -56,16 +82,16 @@ footer{
     div{
         padding-left: calc(50vw - 100px); 
         bottom: 0;
-        #Github_Logo {
+        .GithubLogo {
             width: 50px;
             height: 50px;
             padding: 15px 25px 0 25px;
         }
-        #LinkedIn_Logo {
+        .LinkedInLogo {
             width: 50px;
             height: 50px;
         } 
-        #Thingiverse_Logo {
+        .ThingiverseLogo {
             width: 50px;
             height: 50px;
         } 
