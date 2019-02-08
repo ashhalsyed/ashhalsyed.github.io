@@ -9,31 +9,46 @@
     <link rel="icon" href="assets/Logo White.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
 
-    <header>
-        <span>
-            <img class="Logo" src="assets/Logo White.png" alt="My Logo White" >
-            <nav>
-                <a class="MenuBar AboutMe" href="#About-Me">About Me</a> 
-                <a class="MenuBar Projects" href="#Projects">Projects</a>    
-            </nav>
-        </span>
-
- 
-
-        <!-- <a href="https://www.linkedin.com/in/ashhalsyed" class="fa fa-linkedin"> </a>
-        <a href="https://github.com/ashhalsyed" class="fa fa-github"> </a>  -->
-    </header>
-
-    <footer>
-        <div>
-            <img href="https://www.linkedin.com/in/ashhalsyed" class="LinkedInLogo" src="assets/LinkedIn Logo.png" alt="LinkedIn Logo">
-            <img href="https://github.com/ashhalsyed" class="GithubLogo" src="assets/Github Logo.png" alt="Github Logo">
-            <img href="https://www.thingiverse.com/ashhals" class="ThingiverseLogo" src="assets/Thingiverse Logo.png" alt="Thingiverse Logo">
+    <div class="Page">
+                
+        <div class="Header">
+            <img class="Logo" src="assets/Logo White.png" alt="My Logo White">
+            <a class="MenuBar AboutMe" href="#About-Me" onclick="goToProjectsPage()">About Me</a> 
+            <a class="MenuBar Projects" href="#Projects">Projects</a>
+            <button class="Toggle-Fullscreen" onclick="toggleFullScreen()">
+                <img class="Expand" src="/assets/expand.png" alt="Go Full Screen">
+            </button>
         </div>
-    </footer>
-    
+
+        <div class="Main">
+            <div class="About-Me-Text">
+                <h1>About Me</h1>
+                <p>This is a paragraph about me</p> 
+            </div>
+            <img class="Picture-of-me" src="/assets/Placeholder.png" alt="Picture of me">
+        </div>
+
+        <div class="Footer">
+            <div class="Icons-holder">
+                <button class="Icons" onclick="window.open('https://www.linkedin.com/in/ashhalsyed')">
+                    <img class="LinkedInLogo" src="assets/LinkedIn Logo.png" alt="LinkedIn Logo">
+                </button>
+                
+                <button class="Icons Round" onclick="window.open('https://github.com/ashhalsyed')">
+                    <img class="GithubLogo" src="assets/Github Logo.png" alt="Github Logo">
+                </button>
+                
+                <button class="Icons Round" onclick="window.open('https://www.thingiverse.com/ashhals')">
+                    <img class="ThingiverseLogo" src="assets/Thingiverse Logo.png" alt="Thingiverse Logo">
+                </button>
+            </div>
+        </div>
+
+    </div>
+
     <script type="text/javascript" src="events.js"></script>
 </body>
 
