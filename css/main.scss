@@ -42,6 +42,7 @@ body {
                 border-radius: 12px;
                 box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
                 overflow:visible;
+                -webkit-tap-highlight-color: transparent;
                 
                 &.AboutMe {
                     margin-right: 20px;
@@ -70,8 +71,9 @@ body {
                 cursor: pointer;
                 user-select: none;
                 -webkit-tap-highlight-color: transparent;
-                justify-content: center;
                 //Removes Blue Highlight from chrome mobile button
+                justify-content: center;
+                
                 
                 .Expand {
                     width: 50px;
@@ -121,6 +123,7 @@ body {
                     background-color: inherit;
                     border: none;
                     outline: none;
+                    -webkit-tap-highlight-color: transparent;
                 }
                 .LinkedInLogo {
                     user-select: none;
@@ -137,7 +140,8 @@ body {
                     margin: 0 20px;
                     border-radius: 50%;
                     &:hover {
-                        cursor: pointer;                    
+                        cursor: pointer;
+                                            
                     }
                 }
                 .ThingiverseLogo {
