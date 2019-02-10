@@ -196,6 +196,10 @@ html body .Page .Main .Projects_screen .Project {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 1em;
+  margin-bottom: 5em;
+  padding: 1em;
 }
 
 html body .Page .Main .Projects_screen .Project h1 {
@@ -214,7 +218,6 @@ html body .Page .Main .Projects_screen .Project p {
   font-weight: 500;
   color: white;
   text-align: center;
-  margin-bottom: 1em;
   word-wrap: break-word;
 }
 
@@ -226,12 +229,14 @@ html body .Page .Main .Projects_screen .Project .Project_img {
   -o-object-fit: contain;
      object-fit: contain;
   max-width: 100%;
-  max-height: 90%;
+  max-height: 100%;
   width: auto;
   height: auto;
   margin-bottom: 2em;
   -webkit-box-shadow: 0px 0px 26px 2px rgba(0, 0, 0, 0.56);
           box-shadow: 0px 0px 26px 2px rgba(0, 0, 0, 0.56);
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 html body .Page .Main .Projects_screen .Project .Link_to_code {
@@ -254,7 +259,7 @@ html body .Page .Main .Projects_screen .Project .Link_to_code {
   -webkit-tap-highlight-color: transparent;
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
-  margin-bottom: 2em;
+  margin: 1em;
 }
 
 html body .Page .Main .Projects_screen .Project .Link_to_code:hover {
@@ -407,8 +412,8 @@ html body .Page .Footer .Icons_holder .Icons .Logo.Github {
   .Main .Projects_screen .Project h1 {
     font-size: 2em !important;
   }
-  .Main .Projects_screen .Project.one h1 {
-    margin-top: 1em;
+  .Main .Projects_screen .Project.one {
+    margin-top: 3em;
   }
   .Main .Projects_screen .Project .Project_img {
     -o-object-fit: contain !important;
