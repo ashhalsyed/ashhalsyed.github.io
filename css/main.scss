@@ -1,7 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
 
 * {
-    margin: 0; padding: 0;
+    margin: 0; 
+    padding: 0; 
+    ::selection { 
+        background:rgba(0, 0, 0,0.7) 
+    }
 }
 
 html {
@@ -104,15 +108,16 @@ html {
                             vertical-align: top;
                             font-size: 5em;
                             font-family: "Quicksand", sans-serif;
-                            font-weight: 650;
+                            font-weight: 600;
                             color: white;
+                            margin-bottom: 0.1em
 
                         }
                         p {
                             font-size: 1em;
                             font-family: "Quicksand", sans-serif;
-                            font-weight: 650;
-                            color: white;
+                            // font-weight: 600;
+                            color: rgb(255, 255, 255);
                         }
                     }
                     .Picture-of-me {
@@ -121,6 +126,7 @@ html {
                         width: 25em;
                         height: 25em;
                         border-radius: 1em;
+                        box-shadow: 0px 0px 26px 2px rgba(0,0,0,0.56);
                     }
                 }
                 .Projects_screen {
@@ -130,6 +136,9 @@ html {
                     align-items: center;
                     
                     .Project {
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
 
                         h1 {
                             vertical-align: top;
@@ -146,14 +155,43 @@ html {
                             font-weight: 500;
                             color: white;
                             text-align: center;
-                            margin-bottom: 2em;
+                            margin-bottom: 1em;
+                            word-wrap: break-word;
                         }
                         .Project_img {
                             user-select: none;
-                            width: 50em;
-                            height: 25em;
+                            object-fit: contain;
+                            max-width: 100%;
+                            max-height: 90%;
+                            width: auto;
+                            height: auto;
                             margin-bottom: 2em;
-                            border-radius: 1em;
+                            box-shadow: 0px 0px 26px 2px rgba(0,0,0,0.56);
+                        }
+                        .Link_to_code {
+                            user-select: none;
+                            text-align: center;
+                            text-decoration: none;
+                            font-family: "Quicksand", sans-serif;
+                            color: white;
+                            font-weight: 600;
+                            font-size: 1.3em;
+                            background-color:rgb(0, 161, 0);
+                            padding: 0.6em 0.6em;
+                            border-radius: 0.4em;
+                            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+                            overflow:visible;
+                            -webkit-tap-highlight-color: transparent;
+                            transition: 0.3s ease-out;
+                            margin-bottom: 2em;
+                            
+                            &:hover {
+                                transition: all 0.3s ease-out;
+                                background-color: rgb(0, 218, 0);
+                                color: black;
+                                font-weight: 700;
+                                animation: go_to_code_scale 0.3s forwards ease-in;  
+                            }
                         }
                     }
                 }
@@ -356,5 +394,13 @@ html {
         }
     100% {
         transform: scale(1.08);
+        }  
+}
+@keyframes go_to_code_scale {
+    0% {
+        transform: scale(1);
+        }
+    100% {
+        transform: scale(1.03);
         }  
 }

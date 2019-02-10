@@ -4,6 +4,14 @@
   padding: 0;
 }
 
+* ::-moz-selection {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+* ::selection {
+  background: rgba(0, 0, 0, 0.7);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -138,14 +146,14 @@ html body .Page .Main .Homescreen .About-Me-Text h1 {
   vertical-align: top;
   font-size: 5em;
   font-family: "Quicksand", sans-serif;
-  font-weight: 650;
+  font-weight: 600;
   color: white;
+  margin-bottom: 0.1em;
 }
 
 html body .Page .Main .Homescreen .About-Me-Text p {
   font-size: 1em;
   font-family: "Quicksand", sans-serif;
-  font-weight: 650;
   color: white;
 }
 
@@ -157,6 +165,8 @@ html body .Page .Main .Homescreen .Picture-of-me {
   width: 25em;
   height: 25em;
   border-radius: 1em;
+  -webkit-box-shadow: 0px 0px 26px 2px rgba(0, 0, 0, 0.56);
+          box-shadow: 0px 0px 26px 2px rgba(0, 0, 0, 0.56);
 }
 
 html body .Page .Main .Projects_screen {
@@ -175,6 +185,19 @@ html body .Page .Main .Projects_screen {
           align-items: center;
 }
 
+html body .Page .Main .Projects_screen .Project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 html body .Page .Main .Projects_screen .Project h1 {
   vertical-align: top;
   font-size: 4em;
@@ -191,7 +214,8 @@ html body .Page .Main .Projects_screen .Project p {
   font-weight: 500;
   color: white;
   text-align: center;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+  word-wrap: break-word;
 }
 
 html body .Page .Main .Projects_screen .Project .Project_img {
@@ -199,10 +223,48 @@ html body .Page .Main .Projects_screen .Project .Project_img {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  width: 50em;
-  height: 25em;
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 100%;
+  max-height: 90%;
+  width: auto;
+  height: auto;
   margin-bottom: 2em;
-  border-radius: 1em;
+  -webkit-box-shadow: 0px 0px 26px 2px rgba(0, 0, 0, 0.56);
+          box-shadow: 0px 0px 26px 2px rgba(0, 0, 0, 0.56);
+}
+
+html body .Page .Main .Projects_screen .Project .Link_to_code {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: 1.3em;
+  background-color: #00a100;
+  padding: 0.6em 0.6em;
+  border-radius: 0.4em;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  overflow: visible;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  margin-bottom: 2em;
+}
+
+html body .Page .Main .Projects_screen .Project .Link_to_code:hover {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background-color: #00da00;
+  color: black;
+  font-weight: 700;
+  -webkit-animation: go_to_code_scale 0.3s forwards ease-in;
+          animation: go_to_code_scale 0.3s forwards ease-in;
 }
 
 html body .Page .Footer {
@@ -463,6 +525,28 @@ html body .Page .Footer .Icons_holder .Icons .Logo.Github {
   100% {
     -webkit-transform: scale(1.08);
             transform: scale(1.08);
+  }
+}
+
+@-webkit-keyframes go_to_code_scale {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
+  }
+}
+
+@keyframes go_to_code_scale {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
   }
 }
 /*# sourceMappingURL=main.css.map */
