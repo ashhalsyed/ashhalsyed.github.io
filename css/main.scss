@@ -8,18 +8,17 @@ html {
     scroll-behavior: smooth;
 
     body {
-        height: 100%;
+        // min-height: 100vh;
 
         
         .Page{
             display: flex;
             flex-direction: column;
-            height: 100%;
+            min-height: 100vh;
 
             .Header{
                 background-color: rgb(26, 26, 26);
                 padding: 1em;
-                height: 100%;
 
                 .Header_container {
                     height: 3.5em;
@@ -91,7 +90,7 @@ html {
             .Main{
                 background-color: rgb(61, 61, 61);
                 padding: 3em;
-                height: 100%;
+                flex: 1;
                 
                 .Homescreen {
                     flex: 1;
@@ -126,12 +125,12 @@ html {
                 }
                 .Projects_screen {
                     display: flex;
-                    flex-direction: column; 
+                    flex-direction: column;
                     justify-content: center;
                     align-items: center;
                     
                     .Project {
-                        
+
                         h1 {
                             vertical-align: top;
                             font-size: 4em;
@@ -153,7 +152,7 @@ html {
                             user-select: none;
                             width: 50em;
                             height: 25em;
-                            margin-bottom: 1em;
+                            margin-bottom: 2em;
                             border-radius: 1em;
                         }
                     }

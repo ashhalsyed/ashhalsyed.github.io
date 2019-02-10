@@ -8,10 +8,6 @@ html {
   scroll-behavior: smooth;
 }
 
-html body {
-  height: 100%;
-}
-
 html body .Page {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20,13 +16,12 @@ html body .Page {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
+  min-height: 100vh;
 }
 
 html body .Page .Header {
   background-color: #1a1a1a;
   padding: 1em;
-  height: 100%;
 }
 
 html body .Page .Header .Header_container {
@@ -121,7 +116,9 @@ html body .Page .Header .Header_container .Toggle-Fullscreen .Expand {
 html body .Page .Main {
   background-color: #3d3d3d;
   padding: 3em;
-  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 html body .Page .Main .Homescreen {
@@ -204,7 +201,7 @@ html body .Page .Main .Projects_screen .Project .Project_img {
           user-select: none;
   width: 50em;
   height: 25em;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   border-radius: 1em;
 }
 
