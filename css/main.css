@@ -8,7 +8,11 @@ html {
   scroll-behavior: smooth;
 }
 
-body .Page {
+html body {
+  height: 100%;
+}
+
+html body .Page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,33 +20,38 @@ body .Page {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 100%;
 }
 
-body .Page .Header {
+html body .Page .Header {
   background-color: #1a1a1a;
+  padding: 1em;
+  height: 100%;
+}
+
+html body .Page .Header .Header_container {
+  height: 3.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: pass;
-      -ms-flex-pack: pass;
-          justify-content: pass;
-  padding: 20px 20px 20px 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation: header_fadein 1.5s forwards ease-out;
+          animation: header_fadein 1.5s forwards ease-out;
 }
 
-body .Page .Header .Logo {
+html body .Page .Header .Header_container .My_Logo {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  margin-right: 50px;
-  width: 50px;
-  height: 50px;
+  margin-right: 2.5em;
+  width: 4em;
+  height: 4em;
 }
 
-body .Page .Header .MenuBar {
+html body .Page .Header .Header_container .MenuBar {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -51,40 +60,38 @@ body .Page .Header .MenuBar {
   text-decoration: none;
   font-family: "Quicksand", sans-serif;
   color: white;
-  font-weight: 650;
-  font-size: 18px;
+  font-weight: 600;
+  font-size: 1.3em;
   background-color: rgba(0, 0, 0, 0.863);
-  padding: 15px 10px;
-  min-width: 150px;
-  border-radius: 12px;
+  padding: 0.6em 0.6em;
+  min-width: 5em;
+  border-radius: 0.4em;
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   overflow: visible;
   -webkit-tap-highlight-color: transparent;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 
-body .Page .Header .MenuBar.AboutMe {
-  margin-right: 20px;
-}
-
-body .Page .Header .MenuBar.AboutMe:hover {
+html body .Page .Header .Header_container .MenuBar:hover {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   background-color: #e6e6e6;
   color: black;
+  -webkit-animation: scale_up 0.3s forwards ease-in;
+          animation: scale_up 0.3s forwards ease-in;
 }
 
-body .Page .Header .MenuBar.Projects:hover {
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  background-color: #e6e6e6;
-  color: black;
+html body .Page .Header .Header_container .MenuBar.AboutMe {
+  margin-right: 1em;
 }
 
-body .Page .Header .Toggle-Fullscreen {
+html body .Page .Header .Header_container .Toggle-Fullscreen {
   margin-left: auto;
-  height: 50px;
-  border-radius: 5px;
+  border-radius: 0.5em;
+  width: 4em;
+  height: 4em;
   background-color: yellow;
   color: black;
   outline: none;
@@ -100,116 +107,168 @@ body .Page .Header .Toggle-Fullscreen {
           justify-content: center;
 }
 
-body .Page .Header .Toggle-Fullscreen .Expand {
-  width: 50px;
-  height: 50px;
+html body .Page .Header .Header_container .Toggle-Fullscreen:hover {
+  -webkit-animation: scale_up 0.3s forwards ease-in;
+          animation: scale_up 0.3s forwards ease-in;
 }
 
-body .Page .Main {
+html body .Page .Header .Header_container .Toggle-Fullscreen .Expand {
+  width: 100%;
+  height: 100%;
+  padding: auto;
+}
+
+html body .Page .Main {
   background-color: #3d3d3d;
+  padding: 3em;
+  height: 100%;
+}
+
+html body .Page .Main .Homescreen {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 100%;
 }
 
-body .Page .Main .About-Me-Text {
-  margin-left: 60px;
-  margin-top: 50px;
-}
-
-body .Page .Main .About-Me-Text h1 {
+html body .Page .Main .Homescreen .About-Me-Text h1 {
   vertical-align: top;
-  font-size: 75px;
+  font-size: 5em;
   font-family: "Quicksand", sans-serif;
   font-weight: 650;
   color: white;
 }
 
-body .Page .Main .About-Me-Text p {
-  font-size: 25px;
+html body .Page .Main .Homescreen .About-Me-Text p {
+  font-size: 1em;
   font-family: "Quicksand", sans-serif;
   font-weight: 650;
   color: white;
 }
 
-body .Page .Main .Picture-of-me {
+html body .Page .Main .Homescreen .Picture-of-me {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  margin: 50px;
-  width: 400px;
-  height: 400px;
+  width: 25em;
+  height: 25em;
+  border-radius: 1em;
 }
 
-body .Page .Footer {
-  padding: 10px 10px 10px 10px;
-  background-color: black;
+html body .Page .Main .Projects_screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body .Page .Footer div {
+html body .Page .Main .Projects_screen .Project h1 {
+  vertical-align: top;
+  font-size: 4em;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+html body .Page .Main .Projects_screen .Project p {
+  font-size: 1em;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+html body .Page .Main .Projects_screen .Project .Project_img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 50em;
+  height: 25em;
+  margin-bottom: 1em;
+  border-radius: 1em;
+}
+
+html body .Page .Footer {
+  height: 3em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 10px 10px 10px;
+  background-color: #1a1a1a;
 }
 
-body .Page .Footer div .Icons {
+html body .Page .Footer .Icons_holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: footer_fadein 1.5s forwards  ease-out;
+          animation: footer_fadein 1.5s forwards  ease-out;
+}
+
+html body .Page .Footer .Icons_holder .Icons {
   background-color: inherit;
   border: none;
   outline: none;
   -webkit-tap-highlight-color: transparent;
 }
 
-body .Page .Footer div .LinkedInLogo {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  width: 50px;
-  height: 50px;
-}
-
-body .Page .Footer div .LinkedInLogo:hover {
-  cursor: pointer;
-}
-
-body .Page .Footer div .GithubLogo {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  width: 50px;
-  height: 50px;
-  margin: 0 20px;
+html body .Page .Footer .Icons_holder .Icons.Round {
   border-radius: 50%;
 }
 
-body .Page .Footer div .GithubLogo:hover {
-  cursor: pointer;
-}
-
-body .Page .Footer div .ThingiverseLogo {
+html body .Page .Footer .Icons_holder .Icons .Logo {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  width: 3em;
+  height: 3em;
 }
 
-body .Page .Footer div .ThingiverseLogo:hover {
+html body .Page .Footer .Icons_holder .Icons .Logo:hover {
   cursor: pointer;
+  -webkit-animation: scale_up 0.3s forwards ease-in;
+          animation: scale_up 0.3s forwards ease-in;
+}
+
+html body .Page .Footer .Icons_holder .Icons .Logo.Github {
+  margin: 0 2em;
 }
 
 @media screen and (max-width: 950px) {
-  .Main {
+  .Homescreen {
     -webkit-box-pack: center !important;
         -ms-flex-pack: center !important;
             justify-content: center !important;
@@ -221,46 +280,192 @@ body .Page .Footer div .ThingiverseLogo:hover {
         -ms-flex-align: center !important;
             align-items: center !important;
   }
-  .About-Me-Text {
-    margin: 30px 0 0 0 !important;
+  .Homescreen .About-Me-Text {
+    text-align: center;
+  }
+  .Homescreen .About-Me-Text p {
+    margin-bottom: 3em;
+  }
+  .Projects_screen .Project .Project_img {
+    -o-object-fit: contain !important;
+       object-fit: contain !important;
+    max-width: 100% !important;
+    max-height: 90% !important;
+    width: auto !important;
+    height: auto !important;
+    margin-bottom: 2em !important;
   }
 }
 
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 540px) {
+  .Header .Header_container {
+    height: auto !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .Header .Header_container .MenuBar {
+    margin: 0 !important;
+    width: 90% !important;
+    margin-bottom: 0.5em !important;
+  }
+  .Header .Header_container .MenuBar.Projects {
+    margin-bottom: 1em !important;
+  }
+  .Header .Header_container .My_Logo {
+    margin: 0 !important;
+    height: 3em !important;
+    width: 3em !important;
+    margin-bottom: 1em !important;
+  }
+  .Header .Header_container .Toggle-Fullscreen {
+    margin: 0 !important;
+    margin-bottom: 1em !important;
+  }
   .Main {
-    -webkit-box-pack: center !important;
-        -ms-flex-pack: center !important;
-            justify-content: center !important;
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
-    -webkit-box-align: center !important;
-        -ms-flex-align: center !important;
-            align-items: center !important;
+    padding: 1em !important;
   }
-  .About-Me-Text {
-    margin: 30px 0 0 0 !important;
+  .Main .Homescreen .About-Me-Text h1 {
+    font-size: 3em !important;
   }
-  .Picture-of-me {
-    width: 200px !important;
-    height: 200px !important;
+  .Main .Homescreen .About-Me-Text p {
+    margin-bottom: 2em !important;
   }
-  .Header {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
+  .Main .Homescreen .Picture-of-me {
+    -o-object-fit: contain !important;
+       object-fit: contain !important;
+    max-width: 90% !important;
+    max-height: 90% !important;
+    width: auto !important;
+    height: auto !important;
+    margin-bottom: 2em;
   }
-  .Header .MenuBar {
-    width: 100% !important;
-    margin: 0 0 10px 0 !important;
+  .Main .Projects_screen {
+    margin-left: 1em;
+    margin-right: 1em;
   }
-  .Header .Logo {
-    margin: 0 0 20px 0 !important;
+  .Main .Projects_screen .Project h1 {
+    font-size: 2em !important;
   }
-  .Header .Toggle-Fullscreen {
-    margin: 10px 0 0 0 !important;
+  .Main .Projects_screen .Project.one h1 {
+    margin-top: 1em;
+  }
+  .Main .Projects_screen .Project .Project_img {
+    -o-object-fit: contain !important;
+       object-fit: contain !important;
+    max-width: 100% !important;
+    max-height: 90% !important;
+    width: auto !important;
+    height: auto !important;
+    margin-bottom: 2em !important;
+  }
+  .Footer {
+    height: 3em !important;
+  }
+  .Footer .Logo {
+    height: 3em !important;
+    width: 3em !important;
+  }
+}
+
+@-webkit-keyframes header_fadein {
+  0% {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes header_fadein {
+  0% {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes footer_fadein {
+  0% {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes footer_fadein {
+  0% {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes body_fadein {
+  0% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes body_fadein {
+  0% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes scale_up {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.08);
+            transform: scale(1.08);
+  }
+}
+
+@keyframes scale_up {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.08);
+            transform: scale(1.08);
   }
 }
 /*# sourceMappingURL=main.css.map */
