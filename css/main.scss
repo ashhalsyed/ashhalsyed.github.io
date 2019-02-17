@@ -4,7 +4,8 @@
     margin: 0; 
     padding: 0; 
     ::selection { 
-        background:rgba(0, 0, 0,0.7) 
+        background:rgba(76, 0, 255, 0.8);
+        color: rgb(255, 255, 255);
     }
 }
 
@@ -19,7 +20,7 @@ html {
             min-height: 100vh;
 
             .Header{
-                background-color: rgb(26, 26, 26);
+                background-image: linear-gradient(135deg,#3a0da3, #002f94,#052c74);
                 padding: 1em;
 
                 .Header_container {
@@ -42,20 +43,23 @@ html {
                         color: white;
                         font-weight: 600;
                         font-size: 1.3em;
-                        background-color: rgba(0, 0, 0, 0.863);
+                        background: linear-gradient(0deg, rgba(0,0,0,0.3) 0%, rgba(0,0,25,0.3) 50%, rgba(0,0,50,0.3) 100%);
                         padding: 0.6em 0.6em;
                         min-width: 5em;
                         border-radius: 0.4em;
-                        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
                         overflow:visible;
                         -webkit-tap-highlight-color: transparent;
                         transition: 0.3s ease-out;
                         
                         &:hover {
                             transition: all 0.3s ease-out;
-                            background-color: rgb(230, 230, 230);
+                            background: rgba(255, 255, 255,0.8) !important;
                             color: black;
                             animation: scale_up 0.3s forwards ease-in;  
+                            
+                        &:active {
+                           box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.23); 
+                        }
                         }
                         &.AboutMe {
                             margin-right: 1em;
@@ -66,7 +70,6 @@ html {
             }
             
             .Main{
-                background-color: rgb(61, 61, 61);
                 padding: 3em;
                 flex: 1;
                 
@@ -77,54 +80,92 @@ html {
                     height: 100%;
 
                     .About-Me-Text {
-                        // animation: body_fadein 1s forwards ease-out;  
+                        padding: 1em;
+                        background: linear-gradient(45deg, rgba(0, 1, 60, 0.8) 0%, rgba(0,0,0,0.3) 100%);
+                        border-radius: 1em;
+                        animation: body_fadein 1.5s forwards ease-out;
                         h1 {
                             vertical-align: top;
                             font-size: 5em;
                             font-family: "Quicksand", sans-serif;
                             font-weight: 600;
                             color: white;
-                            margin-bottom: 0.1em
+                            margin-bottom: 0.1em;
 
                         }
                         p {
                             font-size: 1em;
                             font-family: "Quicksand", sans-serif;
-                            // font-weight: 600;
                             color: rgb(255, 255, 255);
                         }
-                    }
-                    .Picture-of-me {
-                        // animation: body_fadein 1s forwards ease-out;
-                        user-select: none;
-                        width: 25em;
-                        height: 25em;
-                        border-radius: 1em;
-                        box-shadow: 0px 0px 26px 2px rgba(0,0,0,0.56);
                     }
                 }
                 .Projects_screen {
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
+
+                    .Nav_Projects {
+                        border-radius: 1em;
+                        align-self: center;
+                        display: flex;
+                        align-items: center;
+                        background-color: rgb(255, 255, 255);
+
+                        padding: 0.4em 1.2em;
+                        box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.23);
+
+                        .Project_Button {
+                            word-wrap: break-word;
+                            user-select: none;
+                            text-align: center;
+                            text-decoration: none;
+                            font-family: "Quicksand", sans-serif;
+                            color: black;
+                            font-weight: 600;
+                            font-size: 1.3em;
+                            padding: 0.6em 0.6em;
+                            min-width: 10em;
+                            min-height: 1em;
+                            border-radius: 0.4em;
+                            -webkit-tap-highlight-color: transparent;
+                            transition: 0.3s ease-out;
+                            
+                            &.two {
+                                margin: 0 2em;
+                                
+                            }
+                            
+                            &:hover {
+                                transition: all 0.3s ease-out;
+                                background-image: linear-gradient(0deg,rgba(#1b0a7c,0.9), rgba(#002f94,0.9),rgba(#052c74,0.9));
+                                color: black;
+                                animation: scale_up 0.3s forwards ease-in;
+                                color: rgb(230, 230, 230);  
+                            }
+                        }
+                    }
                     
                     .Project {
+                        align-self: center;
                         display: flex;
                         justify-content: center;
                         flex-direction: column;
-                        background-color: rgba(black,0.5);
+                        background-color: white;
                         border-radius: 1em;
                         margin-bottom: 5em;
                         padding: 1em;
                         box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+                        &.one {
+                            margin-top: 3em;
+                        }
                         
                         h1 {
                             vertical-align: top;
                             font-size: 4em;
                             font-family: "Quicksand", sans-serif;
                             font-weight: 600;
-                            color: white;
+                            color: black;
                             margin-bottom: 0.5em;
                             text-align: center;
                         }
@@ -132,7 +173,6 @@ html {
                             font-size: 1em;
                             font-family: "Quicksand", sans-serif;
                             font-weight: 500;
-                            color: white;
                             text-align: center;
                             word-wrap: break-word;
                         }
@@ -144,7 +184,7 @@ html {
                             width: auto;
                             height: auto;
                             margin-bottom: 2em;
-                            box-shadow: 0px 0px 26px 2px rgba(0,0,0,0.56);
+                            // box-shadow: 0px 0px 26px 2px rgba(0,0,0,0.56);
                             margin-left: 1em;
                             margin-right: 1em;
                         }
@@ -179,23 +219,28 @@ html {
 
             .Footer{
                 height: 3em;
+                background: radial-gradient(circle, rgb(15, 15, 15) 0%, rgba(0,0,0,1) 100%);
+                padding: 1em;
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 10px 10px 10px 10px;
-                background-color: rgb(26, 26, 26);
-                
-                .Icons_holder{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                justify-content: space-between;
+
+                .Filler_Content {
+                    font-size: 1em;
+                    font-family: "Quicksand", sans-serif; 
+                    visibility: hidden;
+                }
+                .Icons_holder {
                     animation: footer_fadein 1.5s forwards  ease-out;
-                    
+                    align-self: center;   
+                    display: flex;
+                    align-items: center;                            
+
                     .Icons {
                         background-color: inherit;
                         border: none;
                         outline: none;
                         -webkit-tap-highlight-color: transparent;
+                        height: 3em;
                         
                         &.Round {
                             border-radius: 50%;
@@ -217,18 +262,28 @@ html {
                         }
                     }
                 }
+                .Copyright_Tag {
+                    color: white;
+                    font-size: 1em;
+                    font-family: "Quicksand", sans-serif; 
+                    align-self: flex-end; 
+                    text-align: center;
+                    margin-left: 1em;      
+                }
             }
         }    
     }
 }
 
 @media screen and (max-width: 950px) {
-
-    .Homescreen {
+.Main {
+    background-position: center center !important;
+       .Homescreen {
         justify-content: center !important;
         flex-direction: column !important;
         align-items: center !important;
         .About-Me-Text {
+            background: linear-gradient(180deg, rgba(0, 1, 60, 0.8) 0%, rgba(0,0,0,0.3) 100%) !important;
             text-align: center;
             p {
             margin-bottom: 3em;  
@@ -237,6 +292,10 @@ html {
     }
     .Projects_screen {
         
+        .Project_Button {
+            min-width: 5em !important;
+        }
+
         .Project {
             
             .Project_img {
@@ -248,7 +307,9 @@ html {
                 margin-bottom: 2em !important;
             }
         }
-    }
+    } 
+}
+
 }
 @media screen and (max-width: 540px) {
 
@@ -256,8 +317,6 @@ html {
         .Header_container {
             height: auto !important;
             flex-direction: column;
-            // justify-content: center;
-            // align-items: center;
             
             .MenuBar {
                 margin: 0 !important;
@@ -278,10 +337,14 @@ html {
     }
     .Main {
         padding: 1em !important;
+        background-size: 200% auto !important;
 
         .Homescreen {
             
             .About-Me-Text {
+                margin-top: 1em;
+                background: linear-gradient(180deg, rgba(0, 1, 60, 0.8) 0%, rgba(0,0,0,0.3) 100%) !important;
+
                 h1 {
                     font-size: 3em !important;
                 }
@@ -300,9 +363,21 @@ html {
             }
         }
         .Projects_screen {
-            margin-left: 1em;
-            margin-right: 1em;
+            margin: 0 1em;
         
+            .Nav_Projects {
+                margin-top: 1em;
+            
+                .Project_Button {
+                    min-width: 2em !important;
+                    font-size: 1em !important;
+                
+                    &.two {
+                        margin: 0 0.5em !important;
+                    }
+                }
+            }
+
             .Project {
                 
                 h1 {
@@ -323,7 +398,13 @@ html {
         }
     }
     .Footer {
-        height: 3em !important;
+        height: auto !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        .Copyright_Tag {
+            align-self: center !important;
+            margin-top: 1em !important; 
+        }
         .Logo {
             height: 3em !important;
             width: 3em !important;
@@ -354,7 +435,7 @@ html {
 @keyframes body_fadein {
     0% {
         transform: scale(0.98);
-        opacity: 1;
+        opacity: 0;
         }
     100% {
         transform: scale(1);

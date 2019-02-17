@@ -5,11 +5,13 @@
 }
 
 * ::-moz-selection {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(76, 0, 255, 0.8);
+  color: white;
 }
 
 * ::selection {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(76, 0, 255, 0.8);
+  color: white;
 }
 
 html {
@@ -28,7 +30,7 @@ html body .Page {
 }
 
 html body .Page .Header {
-  background-color: #1a1a1a;
+  background-image: linear-gradient(135deg, #3a0da3, #002f94, #052c74);
   padding: 1em;
 }
 
@@ -65,12 +67,11 @@ html body .Page .Header .Header_container .MenuBar {
   color: white;
   font-weight: 600;
   font-size: 1.3em;
-  background-color: rgba(0, 0, 0, 0.863);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.3)), color-stop(50%, rgba(0, 0, 25, 0.3)), to(rgba(0, 0, 50, 0.3)));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 25, 0.3) 50%, rgba(0, 0, 50, 0.3) 100%);
   padding: 0.6em 0.6em;
   min-width: 5em;
   border-radius: 0.4em;
-  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   overflow: visible;
   -webkit-tap-highlight-color: transparent;
   -webkit-transition: 0.3s ease-out;
@@ -80,10 +81,15 @@ html body .Page .Header .Header_container .MenuBar {
 html body .Page .Header .Header_container .MenuBar:hover {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  background-color: #e6e6e6;
+  background: rgba(255, 255, 255, 0.8) !important;
   color: black;
   -webkit-animation: scale_up 0.3s forwards ease-in;
           animation: scale_up 0.3s forwards ease-in;
+}
+
+html body .Page .Header .Header_container .MenuBar:hover:active {
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19), 0 3px 3px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19), 0 3px 3px rgba(0, 0, 0, 0.23);
 }
 
 html body .Page .Header .Header_container .MenuBar.AboutMe {
@@ -91,7 +97,6 @@ html body .Page .Header .Header_container .MenuBar.AboutMe {
 }
 
 html body .Page .Main {
-  background-color: #3d3d3d;
   padding: 3em;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -111,6 +116,14 @@ html body .Page .Main .Homescreen {
   height: 100%;
 }
 
+html body .Page .Main .Homescreen .About-Me-Text {
+  padding: 1em;
+  background: linear-gradient(45deg, rgba(0, 1, 60, 0.8) 0%, rgba(0, 0, 0, 0.3) 100%);
+  border-radius: 1em;
+  -webkit-animation: body_fadein 1.5s forwards ease-out;
+          animation: body_fadein 1.5s forwards ease-out;
+}
+
 html body .Page .Main .Homescreen .About-Me-Text h1 {
   vertical-align: top;
   font-size: 5em;
@@ -126,18 +139,6 @@ html body .Page .Main .Homescreen .About-Me-Text p {
   color: white;
 }
 
-html body .Page .Main .Homescreen .Picture-of-me {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  width: 25em;
-  height: 25em;
-  border-radius: 1em;
-  -webkit-box-shadow: 0px 0px 26px 2px rgba(0, 0, 0, 0.56);
-          box-shadow: 0px 0px 26px 2px rgba(0, 0, 0, 0.56);
-}
-
 html body .Page .Main .Projects_screen {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -146,15 +147,63 @@ html body .Page .Main .Projects_screen {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+html body .Page .Main .Projects_screen .Nav_Projects {
+  border-radius: 1em;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: white;
+  padding: 0.4em 1.2em;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19), 0 3px 3px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19), 0 3px 3px rgba(0, 0, 0, 0.23);
+}
+
+html body .Page .Main .Projects_screen .Nav_Projects .Project_Button {
+  word-wrap: break-word;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Quicksand", sans-serif;
+  color: black;
+  font-weight: 600;
+  font-size: 1.3em;
+  padding: 0.6em 0.6em;
+  min-width: 10em;
+  min-height: 1em;
+  border-radius: 0.4em;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+html body .Page .Main .Projects_screen .Nav_Projects .Project_Button.two {
+  margin: 0 2em;
+}
+
+html body .Page .Main .Projects_screen .Nav_Projects .Project_Button:hover {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(27, 10, 124, 0.9)), color-stop(rgba(0, 47, 148, 0.9)), to(rgba(5, 44, 116, 0.9)));
+  background-image: linear-gradient(0deg, rgba(27, 10, 124, 0.9), rgba(0, 47, 148, 0.9), rgba(5, 44, 116, 0.9));
+  color: black;
+  -webkit-animation: scale_up 0.3s forwards ease-in;
+          animation: scale_up 0.3s forwards ease-in;
+  color: #e6e6e6;
 }
 
 html body .Page .Main .Projects_screen .Project {
+  -ms-flex-item-align: center;
+      align-self: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -165,7 +214,7 @@ html body .Page .Main .Projects_screen .Project {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: white;
   border-radius: 1em;
   margin-bottom: 5em;
   padding: 1em;
@@ -173,12 +222,16 @@ html body .Page .Main .Projects_screen .Project {
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
+html body .Page .Main .Projects_screen .Project.one {
+  margin-top: 3em;
+}
+
 html body .Page .Main .Projects_screen .Project h1 {
   vertical-align: top;
   font-size: 4em;
   font-family: "Quicksand", sans-serif;
   font-weight: 600;
-  color: white;
+  color: black;
   margin-bottom: 0.5em;
   text-align: center;
 }
@@ -187,7 +240,6 @@ html body .Page .Main .Projects_screen .Project p {
   font-size: 1em;
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
-  color: white;
   text-align: center;
   word-wrap: break-word;
 }
@@ -204,8 +256,6 @@ html body .Page .Main .Projects_screen .Project .Project_img {
   width: auto;
   height: auto;
   margin-bottom: 2em;
-  -webkit-box-shadow: 0px 0px 26px 2px rgba(0, 0, 0, 0.56);
-          box-shadow: 0px 0px 26px 2px rgba(0, 0, 0, 0.56);
   margin-left: 1em;
   margin-right: 1em;
 }
@@ -245,31 +295,33 @@ html body .Page .Main .Projects_screen .Project .Link_to_code:hover {
 
 html body .Page .Footer {
   height: 3em;
+  background: radial-gradient(circle, #0f0f0f 0%, black 100%);
+  padding: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10px 10px 10px 10px;
-  background-color: #1a1a1a;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html body .Page .Footer .Filler_Content {
+  font-size: 1em;
+  font-family: "Quicksand", sans-serif;
+  visibility: hidden;
 }
 
 html body .Page .Footer .Icons_holder {
+  -webkit-animation: footer_fadein 1.5s forwards  ease-out;
+          animation: footer_fadein 1.5s forwards  ease-out;
+  -ms-flex-item-align: center;
+      align-self: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: footer_fadein 1.5s forwards  ease-out;
-          animation: footer_fadein 1.5s forwards  ease-out;
 }
 
 html body .Page .Footer .Icons_holder .Icons {
@@ -277,6 +329,7 @@ html body .Page .Footer .Icons_holder .Icons {
   border: none;
   outline: none;
   -webkit-tap-highlight-color: transparent;
+  height: 3em;
 }
 
 html body .Page .Footer .Icons_holder .Icons.Round {
@@ -302,8 +355,21 @@ html body .Page .Footer .Icons_holder .Icons .Logo.Github {
   margin: 0 2em;
 }
 
+html body .Page .Footer .Copyright_Tag {
+  color: white;
+  font-size: 1em;
+  font-family: "Quicksand", sans-serif;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  text-align: center;
+  margin-left: 1em;
+}
+
 @media screen and (max-width: 950px) {
-  .Homescreen {
+  .Main {
+    background-position: center center !important;
+  }
+  .Main .Homescreen {
     -webkit-box-pack: center !important;
         -ms-flex-pack: center !important;
             justify-content: center !important;
@@ -315,13 +381,18 @@ html body .Page .Footer .Icons_holder .Icons .Logo.Github {
         -ms-flex-align: center !important;
             align-items: center !important;
   }
-  .Homescreen .About-Me-Text {
+  .Main .Homescreen .About-Me-Text {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 1, 60, 0.8)), to(rgba(0, 0, 0, 0.3))) !important;
+    background: linear-gradient(180deg, rgba(0, 1, 60, 0.8) 0%, rgba(0, 0, 0, 0.3) 100%) !important;
     text-align: center;
   }
-  .Homescreen .About-Me-Text p {
+  .Main .Homescreen .About-Me-Text p {
     margin-bottom: 3em;
   }
-  .Projects_screen .Project .Project_img {
+  .Main .Projects_screen .Project_Button {
+    min-width: 5em !important;
+  }
+  .Main .Projects_screen .Project .Project_img {
     -o-object-fit: contain !important;
        object-fit: contain !important;
     max-width: 100% !important;
@@ -356,6 +427,12 @@ html body .Page .Footer .Icons_holder .Icons .Logo.Github {
   }
   .Main {
     padding: 1em !important;
+    background-size: 200% auto !important;
+  }
+  .Main .Homescreen .About-Me-Text {
+    margin-top: 1em;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 1, 60, 0.8)), to(rgba(0, 0, 0, 0.3))) !important;
+    background: linear-gradient(180deg, rgba(0, 1, 60, 0.8) 0%, rgba(0, 0, 0, 0.3) 100%) !important;
   }
   .Main .Homescreen .About-Me-Text h1 {
     font-size: 3em !important;
@@ -373,8 +450,17 @@ html body .Page .Footer .Icons_holder .Icons .Logo.Github {
     margin-bottom: 2em;
   }
   .Main .Projects_screen {
-    margin-left: 1em;
-    margin-right: 1em;
+    margin: 0 1em;
+  }
+  .Main .Projects_screen .Nav_Projects {
+    margin-top: 1em;
+  }
+  .Main .Projects_screen .Nav_Projects .Project_Button {
+    min-width: 2em !important;
+    font-size: 1em !important;
+  }
+  .Main .Projects_screen .Nav_Projects .Project_Button.two {
+    margin: 0 0.5em !important;
   }
   .Main .Projects_screen .Project h1 {
     font-size: 2em !important;
@@ -392,7 +478,20 @@ html body .Page .Footer .Icons_holder .Icons .Logo.Github {
     margin-bottom: 2em !important;
   }
   .Footer {
-    height: 3em !important;
+    height: auto !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  .Footer .Copyright_Tag {
+    -ms-flex-item-align: center !important;
+        -ms-grid-row-align: center !important;
+        align-self: center !important;
+    margin-top: 1em !important;
   }
   .Footer .Logo {
     height: 3em !important;
@@ -456,7 +555,7 @@ html body .Page .Footer .Icons_holder .Icons .Logo.Github {
   0% {
     -webkit-transform: scale(0.98);
             transform: scale(0.98);
-    opacity: 1;
+    opacity: 0;
   }
   100% {
     -webkit-transform: scale(1);
@@ -469,7 +568,7 @@ html body .Page .Footer .Icons_holder .Icons .Logo.Github {
   0% {
     -webkit-transform: scale(0.98);
             transform: scale(0.98);
-    opacity: 1;
+    opacity: 0;
   }
   100% {
     -webkit-transform: scale(1);
