@@ -327,7 +327,6 @@ html body .Page .Footer .Icons_holder {
 html body .Page .Footer .Icons_holder .Icons {
   background-color: inherit;
   border: none;
-  outline: none;
   -webkit-tap-highlight-color: transparent;
   height: 3em;
 }
