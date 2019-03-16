@@ -313,6 +313,7 @@ html {
 @media screen and (max-width: 540px) {
 
     .Header {
+        background-image: linear-gradient(180deg,#21075e, #002f94,#052c74) !important;
         .Header_container {
             height: auto !important;
             flex-direction: column;

@@ -403,6 +403,10 @@ html body .Page .Footer .Copyright_Tag {
 }
 
 @media screen and (max-width: 540px) {
+  .Header {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#21075e), color-stop(#002f94), to(#052c74)) !important;
+    background-image: linear-gradient(180deg, #21075e, #002f94, #052c74) !important;
+  }
   .Header .Header_container {
     height: auto !important;
     -webkit-box-orient: vertical;
