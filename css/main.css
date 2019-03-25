@@ -280,7 +280,7 @@ html body .Page .Main .Projects_screen .Project .Link_to_code {
   -webkit-tap-highlight-color: transparent;
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
-  margin: 1em;
+  margin: 1em 0.2em 0.2em 0.2em;
 }
 
 html body .Page .Main .Projects_screen .Project .Link_to_code:hover {
@@ -361,7 +361,6 @@ html body .Page .Footer .Copyright_Tag {
   -ms-flex-item-align: end;
       align-self: flex-end;
   text-align: center;
-  margin-left: 1em;
 }
 
 @media screen and (max-width: 950px) {

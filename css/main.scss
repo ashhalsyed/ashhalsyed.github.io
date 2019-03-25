@@ -203,7 +203,7 @@ html {
                             overflow:visible;
                             -webkit-tap-highlight-color: transparent;
                             transition: 0.3s ease-out;
-                            margin: 1em;
+                            margin: 1em 0.2em 0.2em 0.2em;
                             
                             &:hover {
                                 transition: all 0.3s ease-out;
@@ -267,7 +267,7 @@ html {
                     font-family: "Quicksand", sans-serif; 
                     align-self: flex-end; 
                     text-align: center;
-                    margin-left: 1em;      
+                    // margin-left: 1em;      
                 }
             }
         }    
