@@ -105,10 +105,12 @@ html {
                     flex-direction: column;
 
                     .Nav_Projects {
+                        width: 80vw;
                         border-radius: 1em;
                         align-self: center;
                         display: flex;
                         align-items: center;
+                        justify-content: center;
                         background-color: rgb(255, 255, 255);
 
                         padding: 0.4em 1.2em;
@@ -146,6 +148,7 @@ html {
                     }
                     
                     .Project {
+                        width: 80vw;
                         align-self: center;
                         display: flex;
                         justify-content: center;
@@ -188,7 +191,7 @@ html {
                             margin-left: 1em;
                             margin-right: 1em;
                         }
-                        .Link_to_code {
+                        .Custom_Link {
                             user-select: none;
                             text-align: center;
                             text-decoration: none;
@@ -196,7 +199,6 @@ html {
                             color: white;
                             font-weight: 600;
                             font-size: 1.3em;
-                            background-color:rgb(0, 161, 0);
                             padding: 0.6em 0.6em;
                             border-radius: 0.4em;
                             box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
@@ -207,11 +209,27 @@ html {
                             
                             &:hover {
                                 transition: all 0.3s ease-out;
-                                background-color: rgb(0, 218, 0);
                                 color: black;
                                 font-weight: 700;
                                 animation: go_to_code_scale 0.3s forwards ease-in;  
                             }
+
+                            &.to_code {
+                                background-color:rgb(0, 161, 0);
+
+                                &:hover {
+                                    background-color: rgb(0, 218, 0);
+                                }
+                            }
+
+                            &.demo {
+                                background-color:rgb(0, 0, 161);
+                            
+                                &:hover {
+                                    background-color: rgb(0, 0, 255);
+                                }
+                            }
+                            
                         }
                     }
                 }
