@@ -30,7 +30,7 @@ html body .Page {
 }
 
 html body .Page .Header {
-  background-image: linear-gradient(135deg, #3a0da3, #002f94, #052c74);
+  background-image: linear-gradient(135deg, #3a0da3, #052c74, #002f94);
   padding: 1em;
 }
 
@@ -67,8 +67,6 @@ html body .Page .Header .Header_container .MenuBar {
   color: white;
   font-weight: 600;
   font-size: 1.3em;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.3)), color-stop(50%, rgba(0, 0, 25, 0.3)), to(rgba(0, 0, 50, 0.3)));
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 25, 0.3) 50%, rgba(0, 0, 50, 0.3) 100%);
   padding: 0.6em 0.6em;
   min-width: 5em;
   border-radius: 0.4em;
@@ -117,7 +115,7 @@ html body .Page .Main .Homescreen {
 }
 
 html body .Page .Main .Homescreen .About-Me-Text {
-  padding: 1em;
+  padding: 2em;
   background: linear-gradient(45deg, rgba(0, 1, 60, 0.8) 0%, rgba(0, 0, 0, 0.3) 100%);
   border-radius: 1em;
   -webkit-animation: body_fadein 1.5s forwards ease-out;
@@ -126,7 +124,7 @@ html body .Page .Main .Homescreen .About-Me-Text {
 
 html body .Page .Main .Homescreen .About-Me-Text h1 {
   vertical-align: top;
-  font-size: 5em;
+  font-size: 3em;
   font-family: "Quicksand", sans-serif;
   font-weight: 600;
   color: white;
@@ -197,8 +195,7 @@ html body .Page .Main .Projects_screen .Nav_Projects .Project_Button.two {
 html body .Page .Main .Projects_screen .Nav_Projects .Project_Button:hover {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(27, 10, 124, 0.9)), color-stop(rgba(0, 47, 148, 0.9)), to(rgba(5, 44, 116, 0.9)));
-  background-image: linear-gradient(0deg, rgba(27, 10, 124, 0.9), rgba(0, 47, 148, 0.9), rgba(5, 44, 116, 0.9));
+  background-color: #002f94;
   color: black;
   -webkit-animation: scale_up 0.3s forwards ease-in;
           animation: scale_up 0.3s forwards ease-in;
@@ -247,6 +244,7 @@ html body .Page .Main .Projects_screen .Project p {
   font-weight: 500;
   text-align: center;
   word-wrap: break-word;
+  margin-bottom: 1em;
 }
 
 html body .Page .Main .Projects_screen .Project .Project_img {
@@ -278,13 +276,11 @@ html body .Page .Main .Projects_screen .Project .Custom_Link {
   font-size: 1.3em;
   padding: 0.6em 0.6em;
   border-radius: 0.4em;
-  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   overflow: visible;
   -webkit-tap-highlight-color: transparent;
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
-  margin: 1em 0.2em 0.2em 0.2em;
+  margin: 0em 0.2em 0.5em 0.2em;
 }
 
 html body .Page .Main .Projects_screen .Project .Custom_Link:hover {
@@ -309,7 +305,7 @@ html body .Page .Main .Projects_screen .Project .Custom_Link.demo {
 }
 
 html body .Page .Main .Projects_screen .Project .Custom_Link.demo:hover {
-  background-color: blue;
+  background-color: rgba(0, 0, 255, 0.9);
 }
 
 html body .Page .Footer {
@@ -604,8 +600,8 @@ html body .Page .Footer .Copyright_Tag {
             transform: scale(1);
   }
   100% {
-    -webkit-transform: scale(1.08);
-            transform: scale(1.08);
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
   }
 }
 
@@ -615,8 +611,8 @@ html body .Page .Footer .Copyright_Tag {
             transform: scale(1);
   }
   100% {
-    -webkit-transform: scale(1.08);
-            transform: scale(1.08);
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
   }
 }
 
@@ -626,8 +622,8 @@ html body .Page .Footer .Copyright_Tag {
             transform: scale(1);
   }
   100% {
-    -webkit-transform: scale(1.03);
-            transform: scale(1.03);
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
   }
 }
 
@@ -637,8 +633,8 @@ html body .Page .Footer .Copyright_Tag {
             transform: scale(1);
   }
   100% {
-    -webkit-transform: scale(1.03);
-            transform: scale(1.03);
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
   }
 }
 /*# sourceMappingURL=main.css.map */
