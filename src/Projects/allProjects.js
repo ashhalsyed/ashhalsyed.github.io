@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import "../styles/allStyles.scss";
 import { allProjectsData } from '../allData'
-import Ripples from 'react-ripples'
+// import Ripples from 'react-ripples'
 
 function allProjects(props) {
 

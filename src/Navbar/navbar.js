@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/allStyles.scss";
 import logoBlack from '../assets/logoBlack.svg'
 import logoWhite from '../assets/logoWhite.svg'
-import Ripples from 'react-ripples'
+// import Ripples from 'react-ripples'
 
 function navBar(props) {
 
@@ -42,7 +42,7 @@ function navBar(props) {
 					</button>
 				</div>
 				{/* <Ripples color="rgba(255,255,255,0.3)" during={800}> */}
-				<button className='navbarLink about' style={pageTextColour} onClick={props.scrollToAbout}>About</button>
+				<button className='navbarLink about' style={pageTextColour} onClick={props.scrollToAbout}>About 2</button>
 				{/* </Ripples> */}
 				<button className='navbarLink projects' style={pageTextColour} onClick={props.scrollToProjects}>Projects</button>
 			</div>
