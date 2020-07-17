@@ -1,0 +1,520 @@
+html {
+  scroll-behavior: smooth;
+
+  body {
+    margin: 0;
+  }
+}
+
+.App {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+
+  .navBar {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    background-color: rgb(233, 233, 233);
+
+    .logoLink {
+      display: flex;
+      border: none;
+      background: none;
+      padding: 1rem;
+      cursor: pointer;
+
+      .logo {
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        user-select: none;
+      }
+    }
+
+    .navBarMainContent {
+      display: flex;
+      flex-direction: column;
+      margin: 1rem 2rem 0 0;
+
+      .darkThemeToggle {
+        background-color: #000;
+        align-self: flex-end;
+        width: 3rem;
+        height: 1.5rem;
+        border-radius: 2rem;
+        display: flex;
+        padding: 0 0.25rem 0 0.25rem;
+        margin: 0 0 1rem 0;
+        cursor: pointer;
+
+        .darkThemeButton {
+          border-radius: 2rem;
+          width: 1rem;
+          height: 1rem;
+          align-self: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0.5rem;
+          border: none;
+          background-color: #fff;
+          transition: margin 0.3s ease-out;
+          cursor: pointer;
+
+          .fas.fa-sun {
+            font-size: 0.75rem;
+            // animation: fadeThemeIcon 0.3ss forwards;
+          }
+          .fas.fa-moon {
+            font-size: 0.75rem;
+            // animation: fadeThemeIcon 0.3ss forwards;
+          }
+
+          //   @keyframes fadeThemeIcon {
+          //     0% {
+          //       opacity: 0%;
+          //     }
+          //     // 50% {
+          //     //   opacity: 20%;
+          //     // }
+          //     100% {
+          //       opacity: 100%;
+          //     }
+          //   }
+        }
+      }
+
+      .navbarLink {
+        align-self: flex-end;
+        user-select: none;
+        background: none;
+        border: none;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 500;
+        cursor: pointer;
+
+        &.about {
+          margin: 0 0 0.5rem 0;
+          font-size: 1rem;
+          color: #000;
+          //500 = MEDIUM, 700 = BOLD
+        }
+        &.projects {
+          margin: 0 0 0.5rem 0;
+          font-size: 1rem;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  .aboutMe {
+    display: flex;
+    flex-direction: column;
+    // position: absolute;
+    bottom: 0;
+    // padding: 5rem 0 0 0;
+    height: 100vh;
+    // margin: 9rem 0 0 0;
+    // bottom: 0;
+
+    .welcomeText {
+      &.title {
+        font-size: 3rem;
+        margin: 0;
+        color: #000;
+        margin: auto 0 0 1rem;
+      }
+      &.content {
+        font-size: 1rem;
+        color: #000;
+        margin: 1rem 0 1rem 1rem;
+      }
+    }
+
+    .contactLinks {
+      display: flex;
+      margin: 0 0 0 1rem;
+      .linkedinLink {
+        width: 2.5rem;
+        margin: 0 1rem 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .fab.fa-linkedin {
+          font-size: 2.5rem;
+          color: #0077b5;
+        }
+      }
+      .githubLink {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.5rem;
+        .fab.fa-github-square {
+          font-size: 2.5rem;
+          color: #000;
+        }
+      }
+    }
+    .aboutMeImage {
+      width: 18rem;
+      margin: -3rem 0 0 auto;
+      user-select: none;
+    }
+  }
+
+  .allProjects {
+    display: flex;
+    flex-direction: column;
+    // margin: 100vh 0 0 0;
+
+    .projectsTitle {
+      font-size: 2rem;
+      align-self: center;
+      margin: 2rem 0 1rem 0;
+    }
+
+    .allProjectLinks {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      // justify-content: space-evenly;
+      justify-content: center;
+      .projectLink {
+        cursor: pointer;
+        background-color: #000;
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+        width: 19rem;
+        height: 6rem;
+        border-radius: 0.7rem;
+        justify-content: space-between;
+
+        .projectName {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1rem;
+          color: #fff;
+          width: 19rem;
+          height: 3rem;
+          margin: 0;
+          // padding: 1rem;
+          border-radius: 0.5rem 0.5rem 0 0;
+          background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.3)
+          );
+          user-select: none;
+        }
+
+        .projectImage {
+          width: 19rem;
+        }
+        .projectDescription {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 0.75rem;
+          color: #fff;
+          // width: 19rem;
+          height: 3rem;
+          padding: 0 1rem 0 1rem;
+          margin: 0;
+          border-radius: 0 0 0.5rem 0.5rem;
+          background-image: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.3)
+          );
+          user-select: none;
+          text-align: center;
+        }
+      }
+    }
+
+    .allProjectContent {
+      margin: 1rem 0 0 0;
+      display: flex;
+      flex-direction: column;
+      .project {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 0 1rem 0;
+
+        .projectName {
+          align-self: center;
+          text-align: center;
+          font-size: 2rem;
+          margin: 2rem 0 1rem 0;
+        }
+
+        .projectWrapper {
+          display: flex;
+          flex-direction: column;
+          .projectImage {
+            width: 90vw;
+            max-width: 25rem;
+            align-self: center;
+            user-select: none;
+            border-radius: 0.7rem;
+          }
+
+          .projectMain {
+            display: flex;
+            flex-direction: column;
+            .projectButtons {
+              display: flex;
+              //   background-color: slategrey;
+              justify-content: space-evenly;
+
+              .projectButton {
+                text-decoration: none;
+                width: 6rem;
+                height: 2.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 2rem;
+                font-size: 1rem;
+                margin: 1rem 0 1rem 0;
+
+                &.demo {
+                  color: #000;
+                  background: #00ff00;
+                  user-select: none;
+                  font-weight: 700;
+                }
+                &.code {
+                  color: #000;
+                  background: #00ffff;
+                  user-select: none;
+                  font-weight: 700;
+                }
+              }
+            }
+
+            .projectTextWrapper {
+              display: flex;
+              flex-direction: column;
+              .projectTextColumnOne {
+                display: flex;
+                flex-direction: column;
+                .objective {
+                  margin: 0 1rem 0 1rem;
+                  .title {
+                    font-size: 1.5rem;
+                    color: #000;
+                    margin: 0 0 0.5rem 0;
+                    text-decoration: underline;
+                  }
+                  .content {
+                    color: #000;
+                    margin: 0 0 1rem 0;
+                  }
+                }
+
+                .features {
+                  display: flex;
+                  flex-direction: column;
+                  margin: 0 1rem 0 1rem;
+                  .featuresTitle {
+                    font-size: 1.5rem;
+                    color: #000;
+                    margin: 0 0 0.5rem 0;
+                    text-decoration: underline;
+                  }
+
+                  .allFeatures {
+                    padding: 0 0 0 1rem;
+                    margin: 0;
+                    .feature {
+                      font-size: 1rem;
+                      color: #000;
+                      margin: 0 0 1rem 0;
+                    }
+                  }
+                }
+              }
+              .projectTextColumnTwo {
+                display: flex;
+                flex-direction: column;
+                .technologies {
+                  display: flex;
+                  flex-direction: column;
+                  margin: 0 1rem 0 1rem;
+
+                  .technologiesTitle {
+                    font-size: 1.5rem;
+                    margin: 0 0 0.5rem 0;
+                    color: #000;
+                    text-decoration: underline;
+                  }
+                  .technology {
+                    display: flex;
+                    margin: 0 0 1rem 0;
+                    align-items: center;
+                    // height: 2.5rem;
+
+                    .technologyLogoLink {
+                      display: flex;
+                      .technologyLogo {
+                        width: 2rem;
+                        user-select: none;
+                      }
+                    }
+
+                    .technologyPurpose {
+                      color: #000;
+                      font-size: 1rem;
+                      margin: 0 0 0 1rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .App {
+    .navBar {
+      height: 4.5rem;
+      .navBarMainContent {
+        flex-direction: row;
+        margin: 0;
+        // justify-content: space-evenly;
+        // justify-content: flex-end;
+
+        .darkThemeToggle {
+          position: absolute;
+          top: 1rem;
+          right: 2rem;
+        }
+
+        .navbarLink {
+          align-self: center;
+          // background-color: red;
+          // padding: 1rem;
+          height: 4.5rem;
+          width: 6rem;
+          &.about {
+            margin: 0 2rem 0 0;
+          }
+          &.projects {
+            margin: 0 10rem 0 0;
+          }
+        }
+      }
+    }
+
+    .aboutMe {
+      .welcomeText {
+        &.title {
+          margin: 10rem 0 0 5rem;
+        }
+        &.content {
+          margin: 1rem 0 1rem 5rem;
+        }
+      }
+      .contactLinks {
+        margin: 0 0 0 5rem;
+      }
+
+      .aboutMeImage {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 50vw;
+        max-width: 60rem;
+        // height: auto;
+        margin: 0 0 0 auto;
+      }
+    }
+
+    .allProjects {
+      .allProjectContent {
+        .project {
+          // :nth-child(2) {
+          //   order: 3;
+          // }
+          // :nth-child(3) {
+          //   order: 2;
+          // }
+          .projectName {
+            align-self: flex-start;
+            margin: 2rem 0 1rem 3rem;
+          }
+
+          .projectWrapper {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+
+            .projectImage {
+              align-self: flex-end;
+              margin: auto 3rem auto 0;
+              max-width: none;
+              width: 500px;
+            }
+            .projectMain {
+              display: flex;
+              flex-direction: column;
+              .projectButtons {
+                order: 2;
+                justify-content: flex-start;
+                margin: 1rem 0 1rem 3rem;
+                .projectButton {
+                  &.code {
+                    margin: 0 1rem 0 0;
+                  }
+                  &.demo {
+                    margin: 0;
+                  }
+                }
+              }
+
+              .projectTextWrapper {
+                flex-direction: row;
+                // justify-content: space-between;
+                .projectTextColumnOne {
+                  flex: 2;
+                  .objective {
+                    margin: 0 1rem 0.5rem 3rem;
+                    .title {
+                      margin: 0 0 0.5rem 0;
+                    }
+                    .content {
+                      margin: 0 0 1rem 0;
+                    }
+                  }
+
+                  .features {
+                    margin: 0 0 0 3rem;
+                  }
+                }
+                .projectTextColumnTwo {
+                  flex: 1;
+                  .technologies {
+                    margin: 0 1rem 0 3rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
