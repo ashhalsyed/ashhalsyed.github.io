@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.0f442888.chunk.css",
-    "main.js": "/static/js/main.8030b251.chunk.js",
-    "main.js.map": "/static/js/main.8030b251.chunk.js.map",
+    "main.css": "/static/css/main.b66ed957.chunk.css",
+    "main.js": "/static/js/main.f61f4e0b.chunk.js",
+    "main.js.map": "/static/js/main.f61f4e0b.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.5d8ee5e0.js",
     "runtime-main.js.map": "/static/js/runtime-main.5d8ee5e0.js.map",
-    "static/js/2.d5ed8ffc.chunk.js": "/static/js/2.d5ed8ffc.chunk.js",
-    "static/js/2.d5ed8ffc.chunk.js.map": "/static/js/2.d5ed8ffc.chunk.js.map",
+    "static/js/2.60535a1c.chunk.js": "/static/js/2.60535a1c.chunk.js",
+    "static/js/2.60535a1c.chunk.js.map": "/static/js/2.60535a1c.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.42ca205551c9d2de35d492d1a4558fb6.js": "/precache-manifest.42ca205551c9d2de35d492d1a4558fb6.js",
+    "precache-manifest.3347ce4d9f3d2d4fb71688b5ab6d0c80.js": "/precache-manifest.3347ce4d9f3d2d4fb71688b5ab6d0c80.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.0f442888.chunk.css.map": "/static/css/main.0f442888.chunk.css.map",
+    "static/css/main.b66ed957.chunk.css.map": "/static/css/main.b66ed957.chunk.css.map",
     "static/media/Asset 4.svg": "/static/media/Asset 4.553df8f7.svg",
     "static/media/PublisherLogo.svg": "/static/media/PublisherLogo.3d5a9329.svg",
     "static/media/calcCardsPreview.png": "/static/media/calcCardsPreview.8d5983c2.png",
+    "static/media/calcCardsPreviewGif.gif": "/static/media/calcCardsPreviewGif.1aff5701.gif",
     "static/media/computerScienceAdventureQuizPreview.png": "/static/media/computerScienceAdventureQuizPreview.28e19d72.png",
+    "static/media/computerScienceAdventureQuizPreviewGif.gif": "/static/media/computerScienceAdventureQuizPreviewGif.f7a27f82.gif",
     "static/media/easyGuiLogo.png": "/static/media/easyGuiLogo.e232a4f0.png",
     "static/media/firebaseLogo.png": "/static/media/firebaseLogo.bb5d30fe.png",
     "static/media/fontAwesomeLogo.svg": "/static/media/fontAwesomeLogo.8d5d8901.svg",
@@ -28,13 +30,15 @@
     "static/media/reactRouterLogo.png": "/static/media/reactRouterLogo.411caca7.png",
     "static/media/sassLogo.svg": "/static/media/sassLogo.22579bc9.svg",
     "static/media/str60Preview.png": "/static/media/str60Preview.c2817d2c.png",
+    "static/media/str60PreviewGif.gif": "/static/media/str60PreviewGif.73c86f35.gif",
     "static/media/valorantGuidesPreview.png": "/static/media/valorantGuidesPreview.a49806f9.png",
+    "static/media/valorantGuidesPreviewGif.gif": "/static/media/valorantGuidesPreviewGif.abf7d393.gif",
     "static/media/valorantLogo.svg": "/static/media/valorantLogo.3c5c72a9.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.5d8ee5e0.js",
-    "static/js/2.d5ed8ffc.chunk.js",
-    "static/css/main.0f442888.chunk.css",
-    "static/js/main.8030b251.chunk.js"
+    "static/js/2.60535a1c.chunk.js",
+    "static/css/main.b66ed957.chunk.css",
+    "static/js/main.f61f4e0b.chunk.js"
   ]
 }
