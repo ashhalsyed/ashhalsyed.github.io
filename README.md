@@ -1,5 +1,5 @@
 # Personal-Website-React
-My personal site made with React
+My Porfolio Site
 
 ## Getting Started
 
