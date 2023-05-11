@@ -1,0 +1,697 @@
+* {
+  /* margin: 0; */
+  font-family: Abel;
+  font-weight: bold;
+  scroll-behavior: smooth;
+}
+
+*.dark {
+  color: white;
+}
+
+.noTransition {
+  transition: none !important;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  transition: background-color 0.4s ease;
+  margin: 0;
+}
+body.dark {
+  background-color: #121212;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.tooltip {
+  background-color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 100px; */
+  padding: 10px 20px;
+  /* height: 50px; */
+  /* width: auto; */
+  color: white;
+  font-size: 22px;
+  border-radius: 50px;
+  position: absolute;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.tooltip.hidden {
+  opacity: 0;
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  animation: 1.5s ease fadeDown;
+}
+
+.navSection {
+  display: flex;
+  /* gap: 10px; */
+  align-items: center;
+}
+
+.navSection.left {
+  margin: 0 auto 0 0;
+  gap: 40px;
+}
+
+@keyframes fadeDown {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  padding: 20px;
+  transition: transform ease 0.3s;
+}
+
+.logo:hover {
+  fill: #616161;
+  transform: scale(1.1, 1.1);
+}
+
+.logo.dark {
+  fill: white;
+}
+
+.logo.dark:hover {
+  fill: #b5b5b5;
+}
+
+.navLink {
+  font-size: 30px;
+  margin: 5px 0 0 0;
+  transition: color 0.2s ease;
+  transition: transform ease 0.3s, color ease 0.3s, text-shadow ease 0.3s;
+}
+
+.navLink:hover {
+  /* color: #616161; */
+  text-shadow: 0px 5px 20px rgb(175, 175, 175);
+  transform: translateY(-4px);
+}
+
+.navLink.selected {
+  color: #3f55ff !important;
+  text-shadow: 0px 5px 20px #3f55ff;
+  /* Need !important so onclick overwrites colour */
+}
+
+.navLink.selected:hover {
+  color: #616161;
+}
+
+.navLink.dark:hover {
+  color: #b5b5b5;
+}
+
+.socialIcon {
+  width: 30px;
+  height: 30px;
+  padding: 20px;
+  fill: black;
+  transition: transform ease 0.3s;
+}
+
+.socialIcon:hover {
+  fill: #616161;
+  transform: translateY(-4px);
+}
+
+.socialIcon.dark:hover {
+  fill: #616161;
+}
+.socialIcon.gmail:hover {
+  fill: #bb001b !important;
+  /* needed !important */
+}
+
+.socialIcon.linkedin:hover {
+  fill: #0077b5 !important;
+  /* needed !important */
+}
+
+.socialIcon.dark {
+  fill: white;
+}
+
+.socialIcon.dark:hover {
+  fill: #b5b5b5;
+}
+
+.socialIcon:first-child {
+  margin: 0 0 0 auto;
+}
+
+.themeToggle {
+  width: 30px;
+  height: 30px;
+  padding: 20px;
+  /* margin: 0 0 0 60px; */
+  transition: opacity 0.2s ease-in;
+  transition: transform ease 0.3s;
+}
+
+.themeToggle:hover {
+  fill: #616161;
+  transform: translateY(-4px);
+}
+
+.themeToggle.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.themeToggle.dark {
+  fill: white;
+}
+
+.themeToggle.dark:hover {
+  fill: #b5b5b5;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transition: opacity 0.4s ease-in;
+  animation: 0.5s ease fadeInLeft;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    transform: translateX(-2%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.about.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.welcome {
+  font-size: 120px;
+  margin: 0;
+}
+
+.aboutMeContent {
+  font-size: 30px;
+  margin: 5px 0 0 0;
+  text-align: center;
+}
+
+.allProjectContent {
+  display: flex;
+  flex: 1;
+  /* align-items: center; */
+  padding: 20px 50px 50px 100px;
+  gap: 50px;
+}
+
+.allProjectContent.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.allProjects {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* justify-content: space-between; */
+  gap: 50px;
+  /* animation: 0.5s ease fadeDownProjects; */
+}
+
+@keyframes fadeDownProjects {
+  0% {
+    transform: translateY(-3%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.projectLink {
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f1f1;
+  aspect-ratio: 1/1;
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  /* border: 2px solid #3f55ff; */
+  transition: transform ease 0.3s, box-shadow 0.3s ease, border 0.3s ease;
+  box-sizing: border-box;
+}
+
+.projectLink:hover {
+  transform: translateY(-4px);
+  box-shadow: #3f55ff 0px 0px 70px -20px;
+}
+
+.projectLink.selected {
+  box-shadow: #3f55ff 0px 0px 70px -20px;
+  /* border: none; */
+  border-bottom: 6px solid #3f55ff;
+}
+
+.projectLink.dark {
+  background-color: #1f1f1f;
+}
+
+.projectContent {
+  display: flex;
+  flex: 4;
+  gap: 50px;
+}
+
+.projectMainContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  animation: 0.5s ease fadeInLeft;
+}
+
+.projectTitle {
+  margin: 0;
+  font-size: 60px;
+}
+
+.projectDescription {
+  margin: 30px 0 0 0;
+  font-size: 20px;
+}
+
+.projectPoints {
+  margin: 30px 0 0 0;
+  font-size: 20px;
+}
+
+.projectMadeWith {
+  margin: auto 0 20px 0;
+  font-size: 35px;
+}
+
+.projectTools {
+  display: flex;
+  gap: 20px;
+}
+
+.tool {
+  width: 40px;
+  height: 40px;
+  transition: transform ease 0.3s;
+}
+
+.tool:hover {
+  transform: translateY(-4px);
+}
+
+.tool.dark {
+  fill: white;
+}
+
+.tool.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.projectPreview {
+  flex: 2;
+  /* width: auto;
+  height: 500px; */
+  border-radius: 20px;
+  align-self: flex-end;
+  animation: fadeUp ease 0.5s;
+  cursor: pointer;
+}
+
+@keyframes fadeUp {
+  0% {
+    transform: translateY(5%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.projectPreview.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.projectButtonWrapper {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border: 1px solid white;
+  /* filter: drop-shadow(0px 0px 4px #3f55ff); */
+  border-radius: 50px;
+  padding: 10px;
+  right: 0;
+  bottom: 0;
+  margin: 0 20px 20px 0;
+  width: 50px;
+  height: 50px;
+  fill: white;
+  transition: background-color ease 0.2s;
+}
+
+.projectButtonWrapper:hover {
+  background-color: #3f55ff;
+  transition: transform ease 0.3s;
+}
+
+.projectButtonWrapper:hover {
+  transform: translateY(-4px);
+}
+
+.projectButtonWrapper.code {
+  margin: 0 100px 20px 0;
+}
+
+.projectButton {
+  width: 85%;
+}
+
+#reactIcon:hover {
+  fill: #61dafb;
+}
+#firebaseIcon:hover {
+  fill: #ffa701;
+}
+#sassIcon:hover {
+  fill: #cc6699;
+}
+#adobeIcon:hover {
+  fill: #ff0000;
+}
+#fontAwesomeIcon:hover {
+  fill: #308edf;
+}
+#htmlIcon:hover {
+  fill: #e34f26;
+}
+#cssIcon:hover {
+  fill: #1680c0;
+}
+#javascriptIcon:hover {
+  fill: #f7df1e;
+}
+#arduinoIcon:hover {
+  fill: #00979c;
+}
+#cplusplusIcon:hover {
+  fill: #00599c;
+}
+#reactRouterIcon:hover {
+  fill: #f54350;
+}
+#valorantIcon:hover {
+  fill: #fe4655;
+}
+
+/* Large devices */
+@media only screen and (max-width: 1472px) {
+  .navSection.left {
+    gap: 20px;
+  }
+
+  .allProjectContent {
+    flex-direction: column;
+    /* padding: 20px 50px 50px 50px; */
+    padding: 30px;
+  }
+
+  .allProjects {
+    flex-direction: row;
+    padding: 0 20px;
+    /* justify-content: space-evenly; */
+    /* flex-wrap: wrap; */
+  }
+
+  .projectContent {
+    flex-direction: column;
+  }
+
+  .projectLink {
+    flex: 1;
+    aspect-ratio: 1 / 1;
+    /* width: 100%; */
+    /* height: 150px; */
+  }
+
+  .projectPreview {
+    align-self: center;
+    width: 100%;
+    flex: 0;
+  }
+
+  .projectTitle {
+    align-self: center;
+  }
+
+  .projectDescription {
+    margin: 10px 0 0 0;
+  }
+
+  .projectPoints {
+    margin: 10px 0 0 0;
+  }
+
+  .projectMadeWith {
+    margin: 20px 0 10px 0;
+    align-self: center;
+  }
+
+  .projectTools {
+    gap: 20px;
+    align-self: center;
+  }
+}
+
+/* Small devices */
+@media only screen and (max-width: 790px) {
+  .tooltip {
+    /* height: 30px; */
+    font-size: 17px;
+  }
+
+  .navBar {
+    /* flex-direction: column; */
+    justify-content: space-between;
+  }
+
+  .logo {
+    padding: 10px;
+    width: 27px;
+    height: 27px;
+  }
+  .welcome {
+    font-size: 50px;
+  }
+
+  .aboutMeContent {
+    font-size: 20px;
+  }
+
+  .navSection {
+    /* justify-content: space-evenly; */
+    margin: 0 !important;
+  }
+
+  .navSection.left {
+    gap: 0;
+  }
+
+  .navLink {
+    font-size: 20px;
+    margin: 0;
+    height: 100%;
+    padding: 0 10px;
+  }
+
+  .socialIcon {
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+  }
+
+  .themeToggle {
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .allProjectContent {
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .allProjects {
+    gap: 20px;
+  }
+
+  /* #projectCalcCards {
+    margin: 0 20pxwa3;
+  } */
+
+  .ProjectContent {
+    gap: 30px;
+  }
+
+  .projectTitle {
+    font-size: 30px;
+  }
+
+  .projectDescription {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+  .projectPoints {
+    font-size: 15px;
+  }
+
+  .projectMadeWith {
+    font-size: 22px;
+  }
+
+  .projectButtonWrapper {
+    width: 40px;
+    height: 40px;
+  }
+
+  .projectButtonWrapper.demo {
+    margin: 0 20px 20px 0;
+  }
+
+  .projectButtonWrapper.code {
+    margin: 0 80px 20px 0;
+  }
+
+  .projectButton {
+    width: 20px;
+    height: 20px;
+  }
+
+  .projectTools {
+    gap: 10px;
+  }
+
+  .tool {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* very Small devices */
+@media only screen and (max-width: 422px) {
+  .navBar {
+    flex-direction: column;
+  }
+
+  .navLink {
+    /* padding: 20px 20px 10px 20px; */
+    margin: 10px 0 0 0;
+  }
+
+  .logo {
+    padding: 18px 10px 10px 18px;
+  }
+
+  #navLinkAbout {
+    /* padding: 20px 0 0 20px; */
+    margin: 10px 0 0 auto;
+  }
+
+  #navLinkProjects {
+    padding: 0 20px 0 10px;
+  }
+
+  .socialIcon.github {
+    padding: 10px 10px 10px 20px;
+  }
+
+  #themeToggleWrapper {
+    margin: 0 0 0 auto;
+  }
+
+  .themeToggle {
+    padding: 10px 20px 10px 10px;
+  }
+
+  /* .navSection.right {
+    justify-content: space-evenly; 
+    width: 100%;
+    gap: auto; 
+  } */
+
+  /* .navSection.left {
+    justify-content: space-evenly;
+    width: 100%;
+    gap: auto;
+  } */
+
+  /* .navSection {
+     padding: 0 25px; 
+  } */
+
+  .allProjects {
+    /* margin: 20px 0 0 0; */
+    padding: 0 10px;
+  }
+
+  .projectLink {
+    aspect-ratio: 1 / 1;
+    border-radius: 7px;
+  }
+
+  .projectPreview {
+    border-radius: 10px;
+  }
+
+  .projectTools {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
